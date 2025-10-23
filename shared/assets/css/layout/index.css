@@ -1,4 +1,4 @@
-@import "content.css";
-@import "header.css";
-@import "footer.css";
-@import "sidebar.css";
+@import './content.css';
+@import './header.css';
+@import './footer.css';
+@import './sidebar.css';

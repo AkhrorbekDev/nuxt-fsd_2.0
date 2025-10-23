@@ -112,7 +112,7 @@
 
 /* Solid */
 .ui-button-solid {
-  @apply shadow-sm;
+  @apply shadow-xs;
 
   &.ui-button-primary {
     @apply bg-primary-600 text-white hover:bg-primary-700 dark:hover:bg-primary-500;
@@ -157,8 +157,8 @@
 
 /* White */
 .ui-button-white {
-  @apply border-gray-200 bg-white shadow-sm hover:bg-gray-100;
-  @apply dark:border-transparent dark:bg-white dark:bg-opacity-5 dark:hover:bg-opacity-10;
+  @apply border-gray-200 bg-white shadow-xs hover:bg-gray-100;
+  @apply dark:border-transparent dark:bg-white/5 dark:hover:bg-white/10;
 
   &.ui-button-primary {
     @apply text-primary-600 dark:text-primary-500;
@@ -247,42 +247,42 @@
 /* Flat */
 .ui-button-flat {
   &.ui-button-primary {
-    @apply bg-primary-600 bg-opacity-10 text-primary-600 hover:bg-opacity-20;
+    @apply bg-primary-600/10 text-primary-600 hover:bg-primary-600/20;
   }
 
   &.ui-button-secondary {
-    @apply bg-gray-500 bg-opacity-10 text-gray-700 hover:bg-opacity-20 dark:text-gray-400;
+    @apply bg-gray-500/10 text-gray-700 hover:bg-gray-500/20 dark:text-gray-400;
   }
 
   &.ui-button-success {
-    @apply bg-success-600 bg-opacity-10 text-success-600 hover:bg-opacity-20;
+    @apply bg-success-600/10 text-success-600 hover:bg-success-600/20;
   }
 
   &.ui-button-warning {
-    @apply bg-warning-500 bg-opacity-10 text-warning-500 hover:bg-opacity-20;
+    @apply bg-warning-500/10 text-warning-500 hover:bg-warning-500/20;
   }
 
   &.ui-button-danger {
-    @apply bg-danger-600 bg-opacity-10 text-danger-600 hover:bg-opacity-20;
+    @apply bg-danger-600/10 text-danger-600 hover:bg-danger-600/20;
   }
 
   &.ui-button-info {
-    @apply bg-info-600 bg-opacity-10 text-info-600 hover:bg-opacity-20;
+    @apply bg-info-600/10 text-info-600 hover:bg-info-600/20;
   }
 
   &.ui-button-blue {
-    @apply bg-blue-600 bg-opacity-10 text-blue-600 hover:bg-opacity-20;
+    @apply bg-blue-600/10 text-blue-600 hover:bg-blue-600/20;
   }
 
   &.ui-button-cyan {
-    @apply bg-cyan-600 bg-opacity-10 text-cyan-600 hover:bg-opacity-20;
+    @apply bg-cyan-600/10 text-cyan-600 hover:bg-cyan-600/20;
   }
 
   &.ui-button-lime {
-    @apply bg-lime-600 bg-opacity-10 text-lime-600 hover:bg-opacity-20;
+    @apply bg-lime-600/10 text-lime-600 hover:bg-lime-600/20;
   }
 
   &.ui-button-yellow {
-    @apply bg-yellow-600 bg-opacity-10 text-yellow-600 hover:bg-opacity-20;
+    @apply bg-yellow-600/10 text-yellow-600 hover:bg-yellow-600/20;
   }
 }

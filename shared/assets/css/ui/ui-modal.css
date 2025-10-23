@@ -28,7 +28,7 @@
 }
 
 .ui-modal-backdrop {
-  @apply fixed left-0 top-0 z-[1003] grid h-full w-full place-items-end overflow-hidden bg-black bg-opacity-60 sm:place-items-center sm:p-4 md:p-10;
+  @apply fixed left-0 top-0 z-[1003] grid h-full w-full place-items-end overflow-hidden bg-black/60 sm:place-items-center sm:p-4 md:p-10;
 }
 
 .ui-modal-content {
@@ -40,11 +40,11 @@
 }
 
 .ui-modal-loading {
-  @apply absolute left-0 top-0 z-20 h-full w-full overflow-hidden rounded bg-white bg-opacity-60 dark:bg-gray-950 dark:bg-opacity-60;
+  @apply absolute left-0 top-0 z-20 h-full w-full overflow-hidden rounded bg-white/60 dark:bg-gray-950/60;
 }
 
 .ui-modal-header {
-  @apply flex flex-shrink-0 flex-wrap items-start justify-between border-b p-4 dark:border-gray-800;
+  @apply flex shrink-0 flex-wrap items-start justify-between border-b p-4 dark:border-gray-800;
 
   .ui-modal-header-title {
     @apply text-xl font-semibold leading-8 dark:text-gray-50;
@@ -56,7 +56,7 @@
 }
 
 .ui-modal-footer {
-  @apply flex flex-shrink-0 flex-col-reverse items-center justify-end gap-3 border-t p-4 dark:border-gray-800 sm:flex-row;
+  @apply flex shrink-0 flex-col-reverse items-center justify-end gap-3 border-t p-4 dark:border-gray-800 sm:flex-row;
 
   & > * {
     @apply w-full sm:w-auto;

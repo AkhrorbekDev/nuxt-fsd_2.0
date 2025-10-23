@@ -102,7 +102,7 @@
 .ui-checkbox,
 .ui-radio {
   @apply size-4;
-  @apply cursor-pointer rounded shadow-sm transition-colors duration-150 ease-out;
+  @apply cursor-pointer rounded shadow-xs transition-colors duration-150 ease-out;
   @apply border-gray-300 bg-gray-100 dark:border-gray-800 dark:bg-gray-950;
   @apply focus:ring-0 focus:ring-offset-0;
 

@@ -7,7 +7,7 @@
 }
 
 .ui-table-loading-background {
-  @apply absolute left-0 right-0 top-0 z-50 bg-white bg-opacity-60 dark:bg-gray-950 dark:bg-opacity-60;
+  @apply absolute left-0 right-0 top-0 z-50 bg-white/60 dark:bg-gray-950/60;
 }
 
 .ui-table-striped tbody tr {

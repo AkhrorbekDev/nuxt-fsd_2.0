@@ -15,5 +15,5 @@
 }
 
 .ui-card-borderless {
-  @apply border-0 shadow-sm;
+  @apply border-0 shadow-xs;
 }

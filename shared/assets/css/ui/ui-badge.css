@@ -12,7 +12,7 @@
 }
 
 .ui-badge-solid {
-  @apply shadow-sm;
+  @apply shadow-xs;
 
   &.ui-badge-primary {
     @apply bg-primary-600 text-white;
@@ -74,8 +74,8 @@
 }
 
 .ui-badge-white {
-  @apply border bg-white shadow-sm;
-  @apply dark:border-transparent dark:bg-white dark:bg-opacity-5;
+  @apply border bg-white shadow-xs;
+  @apply dark:border-transparent dark:bg-white/5;
 
   &.ui-badge-primary {
     @apply text-primary-600 dark:text-primary-500;
