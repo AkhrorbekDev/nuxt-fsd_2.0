@@ -1,0 +1,92 @@
+.ui-modal {
+  @apply pointer-events-auto relative z-[1004] mx-auto my-0 w-full overflow-auto rounded-t-lg bg-white dark:bg-gray-900 sm:rounded-xl;
+}
+
+/* Size */
+.ui-modal-sm {
+  @apply sm:max-w-[640px];
+}
+
+.ui-modal-md {
+  @apply sm:max-w-[640px] md:max-w-[768px];
+}
+
+.ui-modal-lg {
+  @apply sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px];
+}
+
+.ui-modal-xl {
+  @apply sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px];
+}
+
+.ui-modal-2xl {
+  @apply sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px];
+}
+
+.ui-modal-full {
+  @apply w-full 2xl:max-w-[1536px];
+}
+
+.ui-modal-backdrop {
+  @apply fixed left-0 top-0 z-[1003] grid h-full w-full place-items-end overflow-hidden bg-black bg-opacity-60 sm:place-items-center sm:p-4 md:p-10;
+}
+
+.ui-modal-content {
+  @apply flex h-full max-h-dvh flex-col rounded-md;
+
+  @screen sm {
+    max-height: calc(100dvh - 80px);
+  }
+}
+
+.ui-modal-loading {
+  @apply absolute left-0 top-0 z-20 h-full w-full overflow-hidden rounded bg-white bg-opacity-60 dark:bg-gray-950 dark:bg-opacity-60;
+}
+
+.ui-modal-header {
+  @apply flex flex-shrink-0 flex-wrap items-start justify-between border-b p-4 dark:border-gray-800;
+
+  .ui-modal-header-title {
+    @apply text-xl font-semibold leading-8 dark:text-gray-50;
+  }
+
+  .ui-modal-header-description {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+}
+
+.ui-modal-footer {
+  @apply flex flex-shrink-0 flex-col-reverse items-center justify-end gap-3 border-t p-4 dark:border-gray-800 sm:flex-row;
+
+  & > * {
+    @apply w-full sm:w-auto;
+  }
+}
+
+.ui-modal .ui-modal-header-icons {
+  @apply flex items-center;
+}
+
+.ui-modal .ui-modal-header-icon {
+  @apply relative flex items-center justify-center overflow-hidden;
+}
+
+.ui-modal-enter-active,
+.ui-modal-leave-active {
+  @apply transition duration-300 ease-in-out;
+}
+
+.ui-modal-enter-from,
+.ui-modal-leave-to {
+  @apply translate-y-full transform opacity-0 sm:translate-y-0 sm:scale-75;
+}
+
+.ui-modal-backdrop-enter-active,
+.ui-modal-backdrop-leave-active {
+  transition: 0.3s ease-in-out;
+}
+
+.ui-modal-backdrop-enter-from,
+.ui-modal-backdrop-leave-to {
+  opacity: 0;
+}

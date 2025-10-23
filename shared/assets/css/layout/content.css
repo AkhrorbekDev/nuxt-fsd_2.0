@@ -1,0 +1,11 @@
+.app-content {
+  @apply flex min-h-dvh w-full flex-col items-start justify-between;
+
+  & > main {
+    @apply flex w-full grow items-stretch;
+  }
+}
+
+.app-container {
+  @apply mx-auto w-full max-w-screen-3xl px-4;
+}

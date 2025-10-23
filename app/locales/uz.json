@@ -1,0 +1,74 @@
+{
+  "actions": {
+    "add": "Qo'shish",
+    "cancel": "Bekor qilish",
+    "change_password": "Parolni o'zgartirish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "save": "Saqlash",
+    "sign_in": "Kirish",
+    "sign_out": "Chiqish",
+    "toggle_sidebar": "Yon panelni o'zgartirish"
+  },
+  "descriptions": {
+    "roles": "Rollar ro'yxati",
+    "sign_in": "Iltimos, hisob ma'lumotlaringizni kiriting.",
+    "users": "Foydalanuvchilar ro'yxati"
+  },
+  "labels": {
+    "admin": "Admin",
+    "app_name": "Nuxt FSD",
+    "confirm_password": "Parolni tasdiqlash",
+    "created_at": "Yaratilgan sana",
+    "current_password": "Joriy parol",
+    "dark_theme": "Tungi rejim",
+    "description": "Tavsif",
+    "email": "Elektron pochta",
+    "first_name": "Ism",
+    "home": "Bosh sahifa",
+    "language": "Til",
+    "last_name": "Familiya",
+    "light_theme": "Kunduzgi rejim",
+    "name": "Nomi",
+    "new_password": "Yangi parol",
+    "password": "Parol",
+    "phone": "Telefon",
+    "profile": "Profil",
+    "results": "natijalar",
+    "role": "Rol",
+    "roles": "Rollar",
+    "updated_at": "Yangilangan sana",
+    "users": "Foydalanuvchilar"
+  },
+  "messages": {
+    "confirm": {
+      "delete": "O'chirishga ishonchingiz komilmi?",
+      "sign_out": "Chiqishga ishonchingiz komilmi?"
+    },
+    "info": {
+      "entity_deleted": "{name} o'chirildi"
+    },
+    "success": {
+      "saved": "Muvaffaqiyatli saqlandi"
+    }
+  },
+  "placeholders": {
+    "data_not_found": "Ma'lumot topilmadi",
+    "enter_email": "Elektron pochtangizni kiriting",
+    "enter_password": "Parolingizni kiriting",
+    "page_not_found": "Sahifa topilmadi",
+    "search": "Qidirish",
+    "server_error": "Server xatosi"
+  },
+  "thead": {
+    "actions": "Harakatlar",
+    "sequence": "#"
+  },
+  "validations": {
+    "email": "Noto'g'ri elektron pochta manzili",
+    "maxLength": "Ruxsat etilgan maksimal uzunlik {max}",
+    "minLength": "Minimal talab qilinadigan uzunlik {min}",
+    "required": "Bu maydon to'ldirilishi shart",
+    "sameAs": "Qiymat \"{otherName}\" maydoni bilan mos kelishi kerak"
+  }
+}

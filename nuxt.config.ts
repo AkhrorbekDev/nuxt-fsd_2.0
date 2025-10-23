@@ -6,28 +6,28 @@ export default defineNuxtConfig({
   debug: false,
   telemetry: false,
   dev: !!parseInt(process.env.APP_DEV!),
-
-  srcDir: "src/",
-  compatibilityDate: "2024-04-03",
-  spaLoadingTemplate: "./app/ui/app-loading.html",
-
+  spaLoadingTemplate: "./ui/app-loading.html",
+  // experimental: {
+  //   granularCachedData: false,
+  //   purgeCachedData: false,
+  // },
   dir: {
-    layouts: "./app/layouts",
-    plugins: "./app/plugins",
-    modules: "./app/modules",
-    middleware: "./app/middleware",
-    public: "../public"
+    layouts: "./layouts",
+    plugins: "./plugins",
+    modules: "./modules",
+    middleware: "./middleware",
+    public: "./public"
   },
 
   devtools: { enabled: true },
 
   components: [
-    { path: "./app/ui", pathPrefix: false },
-    { path: "./shared/ui", pathPrefix: false }
+    { path: "../app/ui", pathPrefix: false },
+    { path: "../shared/ui", pathPrefix: false }
   ],
 
   imports: {
-    dirs: ["./shared/composables", "./shared/lib", "./shared/constants", "./shared/stores"]
+    dirs: ["~~/shared/composables", "~~/shared/lib", "~~/shared/constants", "~~/shared/stores"]
   },
 
   devServer: {
@@ -54,16 +54,12 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
 
-  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "~/shared/assets/css/index.css"],
+  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "~~/shared/assets/css/index.css"],
 
   i18n: {
-    lazy: true,
     defaultLocale: "uz",
-    restructureDir: false,
-    langDir: "app/locales/",
-    bundle: {
-      optimizeTranslationDirective: false
-    },
+    restructureDir: "app",
+    langDir: "locales/",
     locales: [
       {
         code: "uz",

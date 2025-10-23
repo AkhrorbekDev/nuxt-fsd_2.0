@@ -1,0 +1,15 @@
+.app-header {
+  @apply sticky top-0 max-h-16 w-full py-3;
+  @apply z-[1001] border-b bg-white dark:border-gray-800 dark:bg-gray-900;
+  @apply duration-300 ease-in-out;
+}
+
+.app-header-container {
+  @apply mx-auto flex w-full max-w-screen-3xl items-center justify-between gap-3 px-4;
+}
+
+.app-header-left,
+.app-header-center,
+.app-header-right {
+  @apply flex items-center gap-3;
+}
