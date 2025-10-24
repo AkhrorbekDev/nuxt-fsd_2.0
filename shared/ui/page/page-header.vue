@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface IProps {
   label: string
-  description: string
+  description?: string
 }
 
 defineProps<IProps>()
@@ -13,7 +13,7 @@ defineProps<IProps>()
       <div class="page__header__content">
         <div>
           <h3 class="page__header-label">{{ label }}</h3>
-          <p class="page__header-description">{{ description }}</p>
+          <p v-if="description" class="page__header-description">{{ description }}</p>
         </div>
 
         <div class="page__header-action">
@@ -25,6 +25,8 @@ defineProps<IProps>()
 </template>
 
 <style scoped>
+@reference "~~/shared/assets/css/index.css";
+
 .page__header {
   @apply border-b bg-gray-50 py-4 dark:border-gray-800 dark:bg-gray-900;
 

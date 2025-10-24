@@ -56,7 +56,7 @@
 }
 
 .hovered .ui-table-fixed-col {
-  @apply bg-gray-200 dark:bg-gray-800 !important;
+  @apply !bg-gray-200 dark:!bg-gray-800;
 }
 
 .ui-table-skeleton {
@@ -81,7 +81,7 @@ tbody {
   @apply bg-white text-xs font-medium dark:bg-gray-900;
 
   & tr.hovered {
-    @apply bg-gray-200 dark:bg-gray-800 !important;
+    @apply !bg-gray-200 dark:!bg-gray-800;
   }
 
   & tr td {

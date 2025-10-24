@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AppError } from "~/widgets/layout"
+import { AppError } from "~~/src/widgets/layout"
 
 const error = useError()
 </script>

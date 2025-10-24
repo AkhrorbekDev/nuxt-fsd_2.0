@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     plugins: "./plugins",
     modules: "./modules",
     middleware: "./middleware",
-    public: "./public"
+    public: "./public",
+    pages: "./src/pages"
   },
 
   devtools: { enabled: true },
@@ -28,7 +29,16 @@ export default defineNuxtConfig({
   ],
 
   imports: {
-    dirs: ["~~/shared/composables", "~~/shared/lib", "~~/shared/constants", "~~/shared/stores"]
+    dirs: [
+      "../shared/composables", 
+      "../shared/lib", 
+      "../shared/constants", 
+      "../shared/stores", 
+      "../shared/utils",
+      "../src/entities",
+      "../src/features",
+      "../src/widgets"
+    ]
   },
 
   devServer: {
@@ -53,10 +63,18 @@ export default defineNuxtConfig({
     layoutTransition: { name: "fade", mode: "out-in" }
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
+  modules: ["@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
 
   css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "~~/shared/assets/css/index.css"],
-
+  // Path aliases for FSD architecture
+  alias: {
+    "@/shared": "./shared",
+    "@/entities": "./src/entities",
+    "@/features": "./src/features",
+    "@/widgets": "./src/widgets",
+    "@/pages": "./src/pages",
+    "@/app": "./app"
+  },
   i18n: {
     defaultLocale: "uz",
     restructureDir: "app",
@@ -83,6 +101,12 @@ export default defineNuxtConfig({
     ]
   },
   compatibilityDate: "2025-07-15",
+
+  // TypeScript configuration
+  typescript: {
+    strict: true,
+    typeCheck: true
+  },
   vite: {
     plugins: [svgLoader({ defaultImport: "component" }), tailwindcss()]
   }

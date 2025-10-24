@@ -29,6 +29,7 @@
     "language": "Язык",
     "last_name": "Фамилия",
     "light_theme": "Светлая тема",
+    "localization": "Локализация",
     "name": "Имя",
     "new_password": "Новый пароль",
     "password": "Пароль",

@@ -33,5 +33,5 @@
 
 .ui-link-disabled,
 .ui-link:disabled {
-  @apply pointer-events-none text-gray-400 !important;
+  @apply !pointer-events-none !text-gray-400;
 }

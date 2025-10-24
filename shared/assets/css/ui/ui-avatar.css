@@ -1,7 +1,7 @@
 .ui-avatar {
   @apply grid place-items-center;
   @apply select-none overflow-hidden rounded-lg;
-  @apply transition duration-300 ease-in-out !important;
+  @apply !transition !duration-300 !ease-in-out;
 
   & > img {
     @apply h-full w-full object-cover object-center;

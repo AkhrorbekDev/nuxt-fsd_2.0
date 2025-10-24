@@ -4,11 +4,11 @@
 }
 
 .ui-badge-rounded {
-  @apply rounded-full !important;
+  @apply !rounded-full;
 }
 
 .ui-badge-squared {
-  @apply rounded-none !important;
+  @apply !rounded-none;
 }
 
 .ui-badge-solid {

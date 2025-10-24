@@ -12,8 +12,8 @@
   }
 
   .v-popper__inner {
-    @apply min-w-[176px] border-none p-0 text-sm transition duration-300 ease-in-out !important;
-    @apply border-gray-200 bg-white/80 dark:bg-gray-900/80 dark:text-white !important;
+    @apply !min-w-[176px] !border-none !p-0 !text-sm !transition !duration-300 !ease-in-out;
+    @apply !border-gray-200 !bg-white/80 dark:!bg-gray-900/80 dark:!text-white;
   }
 
   &.v-popper__popper {
@@ -28,7 +28,7 @@
     @apply pointer-events-auto w-full transition-transform duration-200 ease-in-out;
 
     & .v-popper__inner {
-      @apply rounded-b-none border-b-0 bg-white dark:bg-gray-900 !important;
+      @apply !rounded-b-none !border-b-0 !bg-white dark:!bg-gray-900;
     }
   }
 

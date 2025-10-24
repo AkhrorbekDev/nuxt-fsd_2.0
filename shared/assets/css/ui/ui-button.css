@@ -41,7 +41,7 @@
 
 .ui-button-disabled,
 .ui-button:disabled {
-  @apply pointer-events-none bg-gray-200 text-gray-400 outline-gray-200 dark:bg-gray-800 dark:text-gray-400 !important;
+  @apply !pointer-events-none !bg-gray-200 !text-gray-400 !outline-gray-200 dark:!bg-gray-800 dark:!text-gray-400;
 }
 
 .ui-button-loading {
@@ -74,15 +74,15 @@
   @apply flex items-stretch;
 
   & > * {
-    @apply rounded-none !important;
+    @apply !rounded-none;
   }
 
   & > :first-child {
-    @apply rounded-l-lg !important;
+    @apply !rounded-l-lg;
   }
 
   & > :last-child {
-    @apply rounded-r-lg !important;
+    @apply !rounded-r-lg;
   }
 
   & > :not(:last-child) {

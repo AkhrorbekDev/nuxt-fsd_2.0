@@ -329,9 +329,9 @@ onMounted(async () => {
               :aria-rowindex="rowIdx"
               :class="getRowClass(row, rowIdx)"
               :ref="(el) => onRowMounted(row, el)"
-              @click="onRowClicked(row, rowIdx, $event)"
-              @mouseover="onRowMouseover(row, rowIdx, $event)"
-              @mouseout="onRowMouseout(row, rowIdx, $event)"
+              @click="() => onRowClicked(row, rowIdx, $event)"
+              @mouseover="() => onRowMouseover(row, rowIdx, $event)"
+              @mouseout="() => onRowMouseout(row, rowIdx, $event)"
             >
               <!-- Select input -->
               <template v-if="selectMode">

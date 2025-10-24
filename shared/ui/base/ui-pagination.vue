@@ -41,6 +41,10 @@ const isCurrentPage = (page: number) => model.value === (notEnoughPages.value ? 
 const loadPage = (page: number) => {
   if (page >= props.firstPage && page <= lastPage.value) model.value = page
 }
+
+watchEffect(() => {
+  if (model.value > lastPage.value && lastPage.value > 0) model.value = lastPage.value
+})
 </script>
 
 <template>

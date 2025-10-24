@@ -15,12 +15,16 @@
 </template>
 
 <style scoped>
+@reference "~~/shared/assets/css/index.css";
+
 :slotted(*) {
   @apply w-full;
 }
 </style>
 
 <style>
+@reference "~~/shared/assets/css/index.css";
+
 .before ~ input,
 .before ~ * input {
   @apply pl-9;
