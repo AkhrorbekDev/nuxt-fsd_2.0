@@ -5,46 +5,40 @@ export default defineNuxtConfig({
   ssr: false,
   debug: false,
   telemetry: false,
-  dev: !!parseInt(process.env.APP_DEV!),
+  dev: !!parseInt(import.meta.env.APP_DEV!),
 
-  srcDir: "src/",
   compatibilityDate: "2024-04-03",
-  spaLoadingTemplate: "./app/ui/app-loading.html",
-
-  dir: {
-    layouts: "./app/layouts",
-    plugins: "./app/plugins",
-    modules: "./app/modules",
-    middleware: "./app/middleware",
-    public: "../public"
-  },
-
+  spaLoadingTemplate: "./ui/app-loading.html",
   devtools: { enabled: true },
 
+  dir: {
+    pages: "../pages"
+  },
+
   components: [
-    { path: "./app/ui", pathPrefix: false },
-    { path: "./shared/ui", pathPrefix: false }
+    { path: "./ui", pathPrefix: false },
+    { path: "../shared/ui", pathPrefix: false }
   ],
 
   imports: {
-    dirs: ["./shared/composables", "./shared/lib", "./shared/constants", "./shared/stores"]
+    dirs: ["../shared/composables", "../shared/lib", "../shared/constants", "../shared/stores"]
   },
 
   devServer: {
-    port: parseInt(process.env.APP_PORT || "8000", 10),
-    host: process.env.APP_HOST || "0.0.0.0"
+    port: parseInt(import.meta.env.APP_PORT || "8000", 10),
+    host: import.meta.env.APP_HOST || "0.0.0.0"
   },
 
   runtimeConfig: {
     public: {
-      isDev: !!parseInt(process.env.APP_DEV!),
-      apiUrl: process.env.APP_API_URL,
-      recaptchaKey: process.env.APP_RECAPTCHA_KEY
+      isDev: !!parseInt(import.meta.env.APP_DEV!),
+      apiUrl: import.meta.env.APP_API_URL,
+      recaptchaKey: import.meta.env.APP_RECAPTCHA_KEY
     }
   },
 
   routeRules: {
-    "/gateway/**": { proxy: process.env.APP_API_URL }
+    "/gateway/**": { proxy: import.meta.env.APP_API_URL }
   },
 
   app: {
@@ -54,13 +48,13 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
 
-  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "~/shared/assets/css/index.css"],
+  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "./shared/assets/css/index.css"],
 
   i18n: {
     lazy: true,
     defaultLocale: "uz",
     restructureDir: false,
-    langDir: "app/locales/",
+    langDir: "./locales/",
     bundle: {
       optimizeTranslationDirective: false
     },
