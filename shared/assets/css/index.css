@@ -6,8 +6,6 @@
 @import "./utils";
 @import "tailwindcss";
 
-@config "./tailwind.config.ts";
-
 body {
     @apply overflow-x-hidden bg-gray-100 text-gray-800 dark:bg-gray-950 dark:text-white;
 

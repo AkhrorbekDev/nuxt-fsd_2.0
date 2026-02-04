@@ -1,4 +1,4 @@
-import { useProfileService } from "~~/src/features/profile"
+import { useProfileService } from "@@/features/profile"
 
 export default defineNuxtRouteMiddleware(async (to) => {
   const localePath = useLocalePath()

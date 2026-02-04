@@ -1,11 +1,11 @@
-import colors from "tailwindcss/colors"
+import { amber, blue, emerald, red, sky, zinc } from "tailwindcss/colors"
 
 export const COLORS = {
-  primary: colors.blue,
-  secondary: colors.zinc,
-  success: colors.emerald,
-  warning: colors.amber,
-  danger: colors.red,
-  info: colors.sky,
-  gray: colors.zinc
+  primary: blue,
+  secondary: zinc,
+  success: emerald,
+  warning: amber,
+  danger: red,
+  info: sky,
+  gray: zinc
 }

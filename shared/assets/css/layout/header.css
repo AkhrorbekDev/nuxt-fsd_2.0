@@ -1,11 +1,11 @@
 .app-header {
-  @apply sticky top-0 max-h-16 w-full py-3;
-  @apply z-[1001] border-b bg-white dark:border-gray-800 dark:bg-gray-900;
-  @apply duration-300 ease-in-out;
+  @apply sticky top-0 w-full max-h-16  py-3;
+  @apply bg-white border-b z-[1001] dark:bg-gray-900 dark:border-gray-800;
+  @apply ease-in-out duration-300;
 }
 
 .app-header-container {
-  @apply mx-auto flex w-full max-w-screen-3xl items-center justify-between gap-3 px-4;
+  @apply w-full px-4 max-w-screen-3xl flex items-center justify-between gap-3 mx-auto;
 }
 
 .app-header-left,

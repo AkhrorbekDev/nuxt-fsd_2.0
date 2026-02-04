@@ -1,5 +1,5 @@
 import { vTooltip } from "floating-vue"
-import { vFocus, vDrag } from "~~/shared/directives"
+import { vFocus, vDrag } from "#shared/directives"
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("drag", vDrag)
