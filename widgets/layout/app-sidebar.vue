@@ -83,7 +83,7 @@ watch(isLaptop, (value) => {
 
               <transition name="fade">
                 <div v-if="!isCollapsed" class="grid h-9">
-                  <h3 class="grow truncate text-xl font-bold uppercase leading-none">{{ $t("labels.app_name") }}</h3>
+                  <h3 class="grow truncate text-xl leading-none font-bold uppercase">{{ $t("labels.app_name") }}</h3>
 
                   <p class="flex items-center gap-1 text-xs uppercase">
                     <span>{{ $t("labels.admin") }}</span>

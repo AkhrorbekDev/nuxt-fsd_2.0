@@ -1,4 +1,5 @@
 import svgLoader from "vite-svg-loader"
+import tailwindcss from "@tailwindcss/vite"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -46,7 +47,7 @@ export default defineNuxtConfig({
     layoutTransition: { name: "fade", mode: "out-in" }
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
+  modules: ["@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
 
   css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "./shared/assets/css/index.css"],
 
@@ -81,6 +82,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    plugins: [svgLoader({ defaultImport: "component" })]
+    plugins: [svgLoader({ defaultImport: "component" }), tailwindcss()]
   }
 })
