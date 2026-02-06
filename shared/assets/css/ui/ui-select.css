@@ -94,7 +94,7 @@
 }
 
 .multiselect-tags {
-  @apply mt-1 flex flex-shrink flex-grow flex-wrap items-center pl-2 rtl:pl-0 rtl:pr-2;
+  @apply mt-1 flex shrink grow flex-wrap items-center pl-2 rtl:pl-0 rtl:pr-2;
 }
 
 .multiselect-tag {
@@ -121,7 +121,7 @@
 /*  }*/
 
 .multiselect-tags-search-wrapper {
-  @apply relative mx-0.5 mb-1 inline-block h-full flex-shrink flex-grow;
+  @apply relative mx-0.5 mb-1 inline-block h-full shrink grow;
 }
 
 .multiselect-tags-search {

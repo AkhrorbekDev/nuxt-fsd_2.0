@@ -3,8 +3,7 @@
   @apply box-border flex w-full flex-col text-left;
   @apply transition-all duration-300 ease-in-out;
 
-  &.vsm_expanded {
-  }
+  &.vsm_expanded {}
 
   &.vsm_collapsed {
     .vsm--header {
@@ -12,8 +11,7 @@
     }
   }
 
-  &.vsm_rtl {
-  }
+  &.vsm_rtl {}
 
   .vsm--scroll-wrapper {
     @apply h-full overflow-y-auto overflow-x-hidden;
@@ -31,7 +29,7 @@
   .vsm--item {
     @apply block w-full whitespace-nowrap;
 
-    &.vsm--item_open > .vsm--link {
+    &.vsm--item_open>.vsm--link {
       @apply dark:bg-gray-800 dark:text-gray-100;
     }
   }
@@ -65,15 +63,13 @@
       }
     }
 
-    &.vsm--link_exact-active {
-    }
+    &.vsm--link_exact-active {}
 
-    &.vsm--link_mobile-item {
-    }
+    &.vsm--link_mobile-item {}
 
     &.vsm--link_level-1 {
       .vsm--icon {
-        @apply shrink-0 rounded;
+        @apply shrink-0 rounded-sm;
       }
     }
 
@@ -106,8 +102,7 @@
     }
   }
 
-  .vsm--badge {
-  }
+  .vsm--badge {}
 
   .vsm--header {
     @apply px-2 py-1 pb-2 pt-2 text-sm font-medium text-gray-400;
@@ -128,7 +123,7 @@
     @apply grid gap-1;
     @apply list-none;
 
-    & > .vsm--menu {
+    &>.vsm--menu {
       @apply mt-1 rounded-md bg-gray-950 p-1;
     }
   }
@@ -141,11 +136,9 @@
     @apply hidden;
   }
 
-  .vsm--mobile-bg {
-  }
+  .vsm--mobile-bg {}
 
-  .vsm--toggle-btn {
-  }
+  .vsm--toggle-btn {}
 
   &.vsm_relative {
     position: relative;

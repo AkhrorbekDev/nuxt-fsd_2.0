@@ -3,12 +3,12 @@
 }
 
 .ui-loading-bar {
-  @apply absolute h-full rounded;
+  @apply absolute h-full rounded-sm;
   animation: loading 2.5s infinite ease-in-out;
 }
 
 .ui-loading-next-bar {
-  @apply absolute h-full rounded;
+  @apply absolute h-full rounded-sm;
   animation: loading 2.5s 1s infinite ease-in-out;
 }
 
