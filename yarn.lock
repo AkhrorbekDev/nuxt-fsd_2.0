@@ -1805,7 +1805,7 @@
   resolved "https://registry.yarnpkg.com/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.5.6.tgz#73fdafba2e21c448f0e456bbe13178d8fe11739d"
   integrity sha512-hbQlYcCq5dlAX9Qx+kFb0FHue6vbjlf0FrNzSKdYK2APUf7tGfGxQCk2ihEREmbR6ZMc0MVAD5RIX/41gpUzTw==
 
-"@parcel/watcher@^2.4.1":
+"@parcel/watcher@^2.4.1", "@parcel/watcher@^2.5.1":
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/@parcel/watcher/-/watcher-2.5.6.tgz#3f932828c894f06d0ad9cfefade1756ecc6ef1f1"
   integrity sha512-tmmZ3lQxAe/k/+rNnXQRawJ4NjxO2hqiOLTHvWchtGZULp4RyFeh6aU4XdOYBFe2KE1oShQTv4AblOs2iOrNnQ==
@@ -2139,6 +2139,19 @@
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@svgdotjs/svg.select.js/-/svg.select.js-4.0.3.tgz#6af12755fd71caf703825d4f490fdf02a001cbfc"
   integrity sha512-qkMgso1sd2hXKd1FZ1weO7ANq12sNmQJeGDjs46QwDVsxSRcHmvWKL2NDF7Yimpwf3sl5esOLkPqtV2bQ3v/Jg==
+
+"@tailwindcss/cli@^4.1.18":
+  version "4.1.18"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/cli/-/cli-4.1.18.tgz#c4a8d55da0bcac803b0d21fae168dde76d3f47a3"
+  integrity sha512-sMZ+lZbDyxwjD2E0L7oRUjJ01Ffjtme5OtjvvnC+cV4CEDcbqzbp25TCpxHj6kWLU9+DlqJOiNgSOgctC2aZmg==
+  dependencies:
+    "@parcel/watcher" "^2.5.1"
+    "@tailwindcss/node" "4.1.18"
+    "@tailwindcss/oxide" "4.1.18"
+    enhanced-resolve "^5.18.3"
+    mri "^1.2.0"
+    picocolors "^1.1.1"
+    tailwindcss "4.1.18"
 
 "@tailwindcss/forms@^0.5.9":
   version "0.5.11"
@@ -6214,6 +6227,11 @@ mocked-exports@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/mocked-exports/-/mocked-exports-0.1.1.tgz#6916efea9a9dd0f4abd6a0a72526f56a76c966ea"
   integrity sha512-aF7yRQr/Q0O2/4pIXm6PZ5G+jAd7QS4Yu8m+WEeEHGnbo+7mE36CbLSDQiXYV8bVL3NfmdeqPJct0tUlnjVSnA==
+
+mri@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
+  integrity sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==
 
 mrmime@^2.0.0:
   version "2.0.1"

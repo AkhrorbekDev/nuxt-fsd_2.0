@@ -22,6 +22,7 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/i18n": "^9.4.0",
     "@pinia/nuxt": "^0.9.0",
+    "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/vite": "^4.1.18",
     "@vueform/multiselect": "^2.6.10",
