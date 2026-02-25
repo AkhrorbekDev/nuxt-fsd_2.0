@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRoleService } from "@@/features/role/index"
+import { useRoleService } from "@features/role/index"
 
 interface IProps {
   id: number

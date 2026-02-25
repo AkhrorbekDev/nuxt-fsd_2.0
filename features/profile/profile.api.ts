@@ -1,4 +1,4 @@
-import { Profile, ProfilePassword } from "@@/entities/profile"
+import { Profile, ProfilePassword } from "@entities/profile"
 
 export const useProfileApi = () => {
   const BASE_URL = "/profile"

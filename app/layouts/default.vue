@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { AppHeader, AppSidebar, AppContent } from "@@/widgets/layout"
-import { ProfileModal, ProfilePasswordModal } from "@@/features/profile"
+import { AppContent, AppHeader, AppSidebar } from "@widgets/layout"
+import { ProfileModal, ProfilePasswordModal } from "@features/profile"
 </script>
 
 <template>

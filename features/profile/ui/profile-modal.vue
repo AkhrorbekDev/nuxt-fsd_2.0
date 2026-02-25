@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useProfileService } from "@@/features/profile/index"
-import { Profile } from "@@/entities/profile"
+import { useProfileService } from "@features/profile/index"
+import { Profile } from "@entities/profile"
 
 const { required } = useRule()
 const { $session } = useNuxtApp()

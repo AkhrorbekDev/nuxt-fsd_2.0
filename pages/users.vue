@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { UserList } from "@@/features/user"
+import { UserList } from "@features/user"
 import { UserModal } from "widgets/user"
 
 const { t } = useI18n()

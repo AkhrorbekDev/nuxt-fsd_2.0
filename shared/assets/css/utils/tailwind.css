@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@config './tailwind.config.ts';
+/*@theme {*/
+/*    --breakpoint-3xl: 1920px;*/
+/*}*/
+
+/*@utility bg-primary-* {*/
+/*    background-color: --value(--color-blue-*);*/
+/*}*/
+
+/*@utility text-primary-* {*/
+/*    color: --value(--color-blue-*);*/
+/*}*/
+

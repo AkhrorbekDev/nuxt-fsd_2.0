@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRoleApi } from "@@/features/role/index"
+import { useRoleApi } from "@features/role/index"
 
 import UiSelect from "@vueform/multiselect"
 

@@ -13,7 +13,7 @@ const errorMessage = computed(() => {
 </script>
 
 <template>
-  <section class="bg-radial ui-animation-fade grid min-h-dvh place-items-center">
+  <section class="ui-animation-fade grid min-h-dvh place-items-center bg-radial">
     <div class="z-10 grid min-h-dvh w-full content-center justify-center gap-6 p-4 text-center">
       <h1 class="max-w-4xl text-4xl font-bold md:text-6xl">{{ errorMessage }}</h1>
     </div>

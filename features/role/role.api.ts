@@ -1,4 +1,4 @@
-import { Role } from "@@/entities/role"
+import { Role } from "@entities/role"
 
 export const useRoleApi = () => {
   const BASE_URL = "/role"

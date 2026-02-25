@@ -1,6 +1,6 @@
 import { useReCaptcha } from "vue-recaptcha-v3"
-import { useAuthApi } from "@@/features/auth/index"
-import type { SignIn } from "@@/entities/auth"
+import { useAuthApi } from "@features/auth/index"
+import type { SignIn } from "@entities/auth"
 
 export const useAuthService = () => {
   const authApi = useAuthApi()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useRoleService } from "@@/features/role/index"
-import { Role } from "@@/entities/role"
+import { useRoleService } from "@features/role/index"
+import { Role } from "@entities/role"
 
 const { t } = useI18n()
 const { required } = useRule()

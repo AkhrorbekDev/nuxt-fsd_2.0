@@ -16,7 +16,7 @@ export const colors = {
 
 const config: Config = {
   darkMode: "class",
-  content: ["./**/*.{vue,ts,tsx,html}"],
+  content: ["../../**/*.{vue,ts,tsx,html}"],
   plugins: [forms({ strategy: "class" }), typography()],
   theme: {
     extend: {

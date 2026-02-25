@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { useRoleStore } from "@@/entities/role"
-import { useRoleService } from "@@/features/role/index"
-
-import { RoleListMenu } from "@@/features/role/index"
+import { useRoleStore } from "@entities/role"
+import { RoleListMenu, useRoleService } from "@features/role/index"
 
 const { t } = useI18n()
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RoleList, RoleModal } from "@@/features/role"
+import { RoleList, RoleModal } from "@features/role"
 
 const { t } = useI18n()
 useHead({ title: t("labels.roles") })

@@ -1,8 +1,6 @@
 import { debounce } from "lodash-es"
-import { useRoleApi } from "@@/features/role/index"
-import { useRoleStore } from "@@/entities/role"
-
-import { Role } from "@@/entities/role"
+import { useRoleApi } from "@features/role/index"
+import { Role, useRoleStore } from "@entities/role"
 
 export const useRoleService = () => {
   const roleApi = useRoleApi()

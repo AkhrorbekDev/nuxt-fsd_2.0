@@ -1,4 +1,4 @@
-import { SignIn } from "@@/entities/auth"
+import { SignIn } from "@entities/auth"
 
 export const useAuthApi = () => {
   const BASE_URL = "/auth"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { breakpointsTailwind } from "@vueuse/core"
-import { ProfileAvatar } from "@@/features/profile/index"
+import { ProfileAvatar } from "@features/profile/index"
 
 const modal = useModal()
 const { sm } = useBreakpoints(breakpointsTailwind)

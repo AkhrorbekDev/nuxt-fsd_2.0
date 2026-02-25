@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Logo from "#shared/assets/svg/logo.svg"
-import { AppLanguage, AppThemeSwitcher } from "@@/features/layout"
+import { AppLanguage, AppThemeSwitcher } from "@features/layout"
 
 interface IProps {
   heading: string
@@ -52,7 +52,7 @@ defineProps<IProps>()
   }
 
   &-description {
-    @apply mb-6 text-sm text-gray-600 dark:text-gray-400 md:text-base;
+    @apply mb-6 text-sm text-gray-600 md:text-base dark:text-gray-400;
   }
 }
 </style>

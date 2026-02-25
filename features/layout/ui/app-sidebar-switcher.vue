@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { breakpointsTailwind } from "@vueuse/core"
-import { useLayoutStore } from "@@/entities/layout"
+import { useLayoutStore } from "@entities/layout"
 
 const store = useLayoutStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)

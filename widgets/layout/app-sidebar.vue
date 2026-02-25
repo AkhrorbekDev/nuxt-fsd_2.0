@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { breakpointsTailwind } from "@vueuse/core"
-import { useLayoutStore } from "@@/entities/layout"
+import type { SidebarMenuList } from "@entities/layout"
+import { useLayoutStore } from "@entities/layout"
 
 import type { SidebarItem } from "vue-sidebar-menu"
-import type { SidebarMenuList } from "@@/entities/layout"
+import { SidebarMenu } from "vue-sidebar-menu"
 
 // Components
 import Logo from "#shared/assets/svg/logo.svg"
-import { SidebarMenu } from "vue-sidebar-menu"
 
 const { t } = useI18n()
 const store = useLayoutStore()
@@ -66,8 +66,7 @@ watch(isLaptop, (value) => {
   <div @mouseenter="onMouseOver" @mouseleave="onMouseOut">
     <transition name="app-sidebar-slide" mode="out-in">
       <sidebar-menu
-        v-show="store.sidebarIsShown"
-        class="app-sidebar lg:!flex"
+        class="app-sidebar"
         hide-toggle
         disable-hover
         width="256px"
@@ -87,7 +86,7 @@ watch(isLaptop, (value) => {
 
                   <p class="flex items-center gap-1 text-xs uppercase">
                     <span>{{ $t("labels.admin") }}</span>
-                    <span v-if="$config.public.isDev" class="animate-pulse font-bold text-success-600">DEV</span>
+                    <span v-if="$config.public.isDev" class="text-success-600 animate-pulse font-bold">DEV</span>
                   </p>
                 </div>
               </transition>

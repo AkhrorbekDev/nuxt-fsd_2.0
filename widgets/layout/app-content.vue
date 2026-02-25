@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLayoutStore } from "@@/entities/layout"
+import { useLayoutStore } from "@entities/layout"
 
 const store = useLayoutStore()
 </script>

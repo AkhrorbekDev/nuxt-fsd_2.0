@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useProfileService } from "@@/features/profile/index"
-import { ProfilePassword } from "@@/entities/profile"
+import { useProfileService } from "@features/profile/index"
+import { ProfilePassword } from "@entities/profile"
 
 const { t } = useI18n()
 const { required, minLength, sameAs } = useRule()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useAuthService } from "@@/features/auth/index"
-import { SignIn } from "@@/entities/auth"
+import { useAuthService } from "@features/auth/index"
+import { SignIn } from "@entities/auth"
 
 const authService = useAuthService()
 

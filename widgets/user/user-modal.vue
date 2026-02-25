@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useUserService } from "@@/features/user"
+import { useUserService } from "@features/user"
 import { User } from "@@entities/user"
-import { RoleSelect } from "@@/features/role"
+import { RoleSelect } from "@features/role"
 
 const { t } = useI18n()
 const { required, requiredIf, email, minLength } = useRule()

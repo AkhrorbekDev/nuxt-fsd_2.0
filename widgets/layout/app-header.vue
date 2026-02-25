@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ProfileMenu } from "@@/features/profile"
-import { AppLanguage, AppSidebarSwitcher, AppThemeSwitcher } from "@@/features/layout"
+import { ProfileMenu } from "@features/profile"
+import { AppLanguage, AppSidebarSwitcher, AppThemeSwitcher } from "@features/layout"
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import { AppLanguage, AppSidebarSwitcher, AppThemeSwitcher } from "@@/features/l
         <app-language placement="bottom-start" />
         <app-theme-switcher />
 
-        <span class="hidden h-9 w-px bg-gray-200 dark:bg-gray-800 sm:block" />
+        <span class="hidden h-9 w-px bg-gray-200 sm:block dark:bg-gray-800" />
 
         <profile-menu />
       </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserService } from "@@/features/user/index"
+import { useUserService } from "@features/user/index"
 
 interface IProps {
   id: number

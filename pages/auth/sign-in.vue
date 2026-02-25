@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { AuthWrapper } from "widgets/auth"
-import { AuthSignInForm } from "@@/features/auth"
+import { AuthSignInForm } from "@features/auth"
 
 const { t } = useI18n()
 useHead({ title: t("actions.sign_in") })

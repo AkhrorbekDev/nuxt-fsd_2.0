@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { useUserStore } from "@@/entities/user"
-import { useUserService } from "@@/features/user/index"
-
-import { UserListMenu } from "@@/features/user/index"
+import { useUserStore } from "@entities/user"
+import { UserListMenu, useUserService } from "@features/user/index"
 
 const { t } = useI18n()
 const { masked } = useMask()
