@@ -1,4 +1,4 @@
-import { useProfileApi } from "@features/profile/index"
+import { useProfileApi } from "./profile.api"
 import { Profile, ProfilePassword } from "@entities/profile"
 
 export const useProfileService = () => {

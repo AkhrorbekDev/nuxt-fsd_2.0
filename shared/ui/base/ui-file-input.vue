@@ -83,7 +83,7 @@ watch(
     />
 
     <div v-if="fileName?.length" class="after w-9 cursor-pointer" @click="onClear">
-      <i class="le-circle-x text-lg text-danger-500" />
+      <i class="le-circle-x text-danger-500 text-lg" />
     </div>
   </div>
 </template>

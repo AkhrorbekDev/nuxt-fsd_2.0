@@ -16,7 +16,7 @@ const model = defineModel<T>()
 </script>
 
 <template>
-  <div class="flex w-full select-none items-center gap-2">
+  <div class="flex w-full items-center gap-2 select-none">
     <input
       v-bind="inputProps"
       v-model="model"
@@ -29,7 +29,7 @@ const model = defineModel<T>()
 
     <label
       v-bind="labelProps"
-      class="w-full cursor-pointer text-sm font-medium leading-none"
+      class="w-full cursor-pointer text-sm leading-none font-medium"
       :for="id"
       :class="labelClass"
     >

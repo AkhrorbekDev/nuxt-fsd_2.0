@@ -8,7 +8,7 @@ defineProps<IProps>()
 
 <template>
   <div class="ui-card-header flex flex-col gap-3 p-4 sm:flex-row sm:items-center">
-    <h3 v-if="label" class="text-xl font-bold leading-9">{{ label }}</h3>
+    <h3 v-if="label" class="text-xl leading-9 font-bold">{{ label }}</h3>
     <slot />
   </div>
 </template>

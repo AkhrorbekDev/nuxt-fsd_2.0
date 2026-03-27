@@ -1,4 +1,3 @@
-import { fileURLToPath } from "url"
 import svgLoader from "vite-svg-loader"
 import tailwindcss from "@tailwindcss/vite"
 
@@ -14,11 +13,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   alias: {
-    "@shared": fileURLToPath(new URL("./shared", import.meta.url)),
-    "@entities": fileURLToPath(new URL("./entities", import.meta.url)),
-    "@features": fileURLToPath(new URL("./features", import.meta.url)),
-    "@widgets": fileURLToPath(new URL("./widgets", import.meta.url)),
-    "@pages": fileURLToPath(new URL("./pages", import.meta.url))
+    "@shared": new URL("./shared", import.meta.url).pathname,
+    "@entities": new URL("./entities", import.meta.url).pathname,
+    "@features": new URL("./features", import.meta.url).pathname,
+    "@widgets": new URL("./widgets", import.meta.url).pathname,
+    "@pages": new URL("./pages", import.meta.url).pathname
   },
   components: [
     { path: "./ui", pathPrefix: false },

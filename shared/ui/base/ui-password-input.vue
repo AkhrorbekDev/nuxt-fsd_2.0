@@ -13,7 +13,7 @@ const iconName = computed(() => (shown.value ? "iconamoon:eye-off-duotone" : "ic
     <ui-input v-bind="$attrs" class="w-full !pr-9" :type="type" />
 
     <div
-      class="absolute bottom-0 right-0 top-0 grid w-9 cursor-pointer place-items-center text-gray-400"
+      class="absolute top-0 right-0 bottom-0 grid w-9 cursor-pointer place-items-center text-gray-400"
       @click="shown = !shown"
     >
       <icon class="text-xl" :name="iconName" />

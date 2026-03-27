@@ -22,7 +22,7 @@ export const transformParams = (cleanedParams: Record<string, any>, transformati
     transformedParams[key] = transformFn(cleanedParams[key], transformedParams)
   }
 
-  return cleanedParams
+  return transformedParams
 }
 
 export const disableKeys = (event: KeyboardEvent, keys: string[]) => {

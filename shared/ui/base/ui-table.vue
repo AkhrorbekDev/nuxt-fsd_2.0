@@ -225,11 +225,6 @@ const onRowMouseout = (row: T, idx: number, event: MouseEvent) => {
   emits("row-mouseout", row, idx, event)
 }
 
-const onNavigate = (event: MouseEvent, navigate: Function) => {
-  if (props.clickable) event.preventDefault()
-  else navigate(event)
-}
-
 const onChange = (row: T, rowIdx: number, event: Event) => {
   const checked = (<HTMLInputElement>event.target).checked
 
@@ -329,9 +324,9 @@ onMounted(async () => {
               :aria-rowindex="rowIdx"
               :class="getRowClass(row, rowIdx)"
               :ref="(el) => onRowMounted(row, el)"
-              @click="() => onRowClicked(row, rowIdx, $event)"
-              @mouseover="() => onRowMouseover(row, rowIdx, $event)"
-              @mouseout="() => onRowMouseout(row, rowIdx, $event)"
+              @click="onRowClicked(row, rowIdx, $event)"
+              @mouseover="onRowMouseover(row, rowIdx, $event)"
+              @mouseout="onRowMouseout(row, rowIdx, $event)"
             >
               <!-- Select input -->
               <template v-if="selectMode">
@@ -372,15 +367,10 @@ onMounted(async () => {
                       ]"
                       :style="{ width: col.width }"
                     >
-                      <nuxt-link-locale
-                        v-if="rowLink && !col?.withoutLink"
-                        v-slot="{ href, navigate }"
-                        custom
-                        :to="rowLink(row, rowIdx)"
-                      >
-                        <a :href="href" @click="onNavigate($event, navigate)">
+                      <nuxt-link-locale v-if="rowLink && !col?.withoutLink" :to="rowLink(row, rowIdx)">
+                        <span class="contents">
                           <slot :name="col.name" :col="col" :row="row" :idx="rowIdx" :sequence="sequence" />
-                        </a>
+                        </span>
                       </nuxt-link-locale>
 
                       <slot v-else :name="col.name" :col="col" :row="row" :idx="rowIdx" :sequence="sequence" />
@@ -395,21 +385,24 @@ onMounted(async () => {
                       :style="{ width: col.width }"
                       @click="onCellClicked(col, row, rowIdx, $event)"
                     >
-                      <nuxt-link-locale v-slot="{ href, navigate }" custom :to="rowLink(row, rowIdx)">
-                        <a v-html="renderNormalCol(col, row)" :href="href" @click="onNavigate($event, navigate)" />
+                      <nuxt-link-locale :to="rowLink(row, rowIdx)">
+                        <!-- eslint-disable-next-line vue/no-v-html -->
+                        <span v-html="renderNormalCol(col, row)" />
                       </nuxt-link-locale>
                     </td>
 
                     <td
                       v-else
-                      v-html="renderNormalCol(col, row)"
                       :class="[
                         col.dataClass,
                         { 'ui-table-without-link': col?.withoutLink, 'ui-table-fixed-col': col?.fixed }
                       ]"
                       :style="{ width: col.width }"
                       @click="onCellClicked(col, row, rowIdx, $event)"
-                    />
+                    >
+                      <!-- eslint-disable-next-line vue/no-v-html -->
+                      <span v-html="renderNormalCol(col, row)" />
+                    </td>
                   </template>
                 </template>
               </template>

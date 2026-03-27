@@ -4,11 +4,13 @@ export const useInfinite = (el: Ref<HTMLElement>, load = async () => {}) => {
   const loading = ref<boolean>(false)
   const observer = ref<IntersectionObserver>()
 
-  const infiniteScroll = useDebounceFn(async ([{ isIntersecting, target }]: IntersectionObserverEntry[]) => {
-    if (!isIntersecting) return
-    if (target instanceof HTMLElement) {
+  const infiniteScroll = useDebounceFn(async (entries: IntersectionObserverEntry[]) => {
+    const entry = entries[0]
+    if (!entry?.isIntersecting) return
+
+    if (entry.target instanceof HTMLElement) {
       loading.value = true
-      const parent = target.offsetParent!
+      const parent = entry.target.offsetParent!
       const scrollTop = parent?.scrollTop!
       await load()
       await nextTick()

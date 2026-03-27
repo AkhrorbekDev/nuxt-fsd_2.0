@@ -33,8 +33,10 @@
 
 .ui-modal-content {
   @apply flex h-full max-h-dvh flex-col rounded-md;
+}
 
-  @screen sm {
+@media (width >= 40rem) {
+  .ui-modal-content {
     max-height: calc(100dvh - 80px);
   }
 }

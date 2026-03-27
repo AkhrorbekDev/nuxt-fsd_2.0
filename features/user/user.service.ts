@@ -1,5 +1,5 @@
 import { debounce } from "lodash-es"
-import { useUserApi } from "@features/user/index"
+import { useUserApi } from "./user.api"
 import { User, useUserStore } from "@entities/user"
 
 export const useUserService = () => {

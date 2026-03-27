@@ -65,7 +65,8 @@ export default defineNuxtPlugin(() => {
         403: $i18n.t("messages.error.forbidden")
       }
 
-      if (error.response?.status) $toast.error(code[error.response.status])
+      const message = error.response?.status ? code[error.response.status] : undefined
+      if (message) $toast.error(message)
 
       return Promise.reject(error.response)
     }
