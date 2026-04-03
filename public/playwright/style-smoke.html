@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Smoke</title>
+    <link rel="stylesheet" href="/playwright/style-smoke.css" />
+  </head>
+  <body>
+    <section class="grid min-h-dvh place-items-center bg-radial p-6">
+      <div
+        data-testid="style-card"
+        class="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+      >
+        <div class="grid gap-4">
+          <input class="ui-input ui-input-md ui-input-primary" type="text" placeholder="Email" value="john@example.com" />
+
+          <div class="relative">
+            <input
+              class="ui-input ui-input-md ui-input-primary w-full !pr-9"
+              type="password"
+              placeholder="Password"
+              value="secret-123"
+            />
+            <div class="absolute top-0 right-0 bottom-0 grid w-9 cursor-pointer place-items-center text-gray-400">
+              <span class="text-xl">o</span>
+            </div>
+          </div>
+
+          <label class="flex w-full items-center gap-2 select-none">
+            <input class="ui-checkbox form-checkbox shrink-0" type="checkbox" checked />
+            <span class="w-full cursor-pointer text-sm leading-none font-medium">Remember me</span>
+          </label>
+
+          <label class="flex w-full items-center gap-2 select-none">
+            <input class="ui-radio form-radio shrink-0" type="radio" checked />
+            <span class="w-full cursor-pointer text-sm font-medium">Admin</span>
+          </label>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

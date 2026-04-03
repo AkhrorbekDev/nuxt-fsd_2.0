@@ -19,7 +19,10 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:e2e:prepare": "mkdir -p public/playwright && npx @tailwindcss/cli -i ./tests/playwright/style-smoke.css -o ./public/playwright/style-smoke.css",
+    "test:e2e": "yarn test:e2e:prepare && playwright test -c playwright.config.ts",
+    "test:e2e:update": "yarn test:e2e:prepare && playwright test -c playwright.config.ts --update-snapshots"
   },
   "dependencies": {
     "@nuxt/icon": "^1.10.3",
@@ -53,6 +56,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.5.7",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@playwright/test": "^1.59.1",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.16",
     "@types/lodash-es": "^4.17.12",
