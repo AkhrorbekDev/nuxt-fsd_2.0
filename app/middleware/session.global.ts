@@ -1,13 +1,10 @@
-import { useProfileService } from "@@/features/profile"
+import { useProfileService } from "~/features/profile"
 
-export default defineNuxtRouteMiddleware(async (to) => {
-  const localePath = useLocalePath()
+export default defineNuxtRouteMiddleware(async () => {
   const { getProfile } = useProfileService()
   const { $session } = useNuxtApp()
 
   const hasToken = !!$session.token.value
-  const isPublic = to.meta?.public || false
-  const unauthorized = !isPublic && !hasToken
 
   const promise = new Promise((resolve) => setTimeout(resolve, 2500))
 

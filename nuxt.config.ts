@@ -8,21 +8,35 @@ export default defineNuxtConfig({
   telemetry: false,
   dev: !!parseInt(import.meta.env.APP_DEV!),
 
-  compatibilityDate: "2024-04-03",
   spaLoadingTemplate: "./ui/app-loading.html",
   devtools: { enabled: true },
 
-  dir: {
-    pages: "../pages"
+  alias: {
+    "#shared": "./app/shared",
+    "#entities": "./app/entities",
+    "#features": "./app/features",
+    "#widgets": "./app/widgets",
+    "#pages": "./app/pages"
   },
 
   components: [
     { path: "./ui", pathPrefix: false },
-    { path: "../shared/ui", pathPrefix: false }
+    { path: "./shared/ui", pathPrefix: false }
   ],
 
   imports: {
-    dirs: ["../shared/composables", "../shared/lib", "../shared/constants", "../shared/stores"]
+    dirs: [
+      "./shared/composables",
+      "./shared/composables/**",
+      "./shared/constants",
+      "./shared/constants/**",
+      "./shared/directives",
+      "./shared/directives/**",
+      "./shared/lib",
+      "./shared/lib/**",
+      "./shared/stores",
+      "./shared/stores/**"
+    ]
   },
 
   devServer: {
@@ -37,7 +51,9 @@ export default defineNuxtConfig({
       recaptchaKey: import.meta.env.APP_RECAPTCHA_KEY
     }
   },
-
+  typescript: {
+    typeCheck: true
+  },
   routeRules: {
     "/gateway/**": { proxy: import.meta.env.APP_API_URL }
   },
@@ -49,7 +65,7 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
 
-  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "./shared/assets/css/index.css"],
+  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "./assets/css/main.css"],
 
   i18n: {
     lazy: true,

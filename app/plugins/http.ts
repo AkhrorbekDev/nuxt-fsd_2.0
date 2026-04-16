@@ -52,8 +52,8 @@ export default defineNuxtPlugin(() => {
 
       if (code && code.toLowerCase() !== "ok") {
         const result = description?.split("_")
-        if (result?.length > 1) $toast.error($i18n.t(`messages.error.${description}`))
-        else $toast.error(description)
+        if (result?.length > 1 && description) $toast.error($i18n.t(`messages.error.${description}`))
+        else if (description) $toast.error(description)
         return Promise.reject(response)
       }
 
@@ -65,7 +65,8 @@ export default defineNuxtPlugin(() => {
         403: $i18n.t("messages.error.forbidden")
       }
 
-      if (error.response?.status) $toast.error(code[error.response.status])
+      const errorMessage = error.response?.status ? code[error.response.status] : undefined
+      if (errorMessage) $toast.error(errorMessage)
 
       return Promise.reject(error.response)
     }
