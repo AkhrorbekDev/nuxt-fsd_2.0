@@ -1,22 +1,22 @@
 import forms from "@tailwindcss/forms"
 import typography from "@tailwindcss/typography"
-import { blue, emerald, amber, red, sky, zinc } from "tailwindcss/colors"
+import Colors from "tailwindcss/colors"
 
 import type { Config } from "tailwindcss"
 
 export const colors = {
-  primary: blue,
-  secondary: zinc,
-  success: emerald,
-  warning: amber,
-  danger: red,
-  info: sky,
-  gray: zinc
+  primary: Colors.blue,
+  secondary: Colors.zinc,
+  success: Colors.emerald,
+  warning: Colors.amber,
+  danger: Colors.red,
+  info: Colors.sky,
+  gray: Colors.zinc
 }
 
 const config: Config = {
   darkMode: "class",
-  content: ["./src/**/*.{vue,ts,tsx,html}"],
+  content: ["./**/*.{vue,ts,tsx,html}"],
   plugins: [forms({ strategy: "class" }), typography()],
   theme: {
     extend: {

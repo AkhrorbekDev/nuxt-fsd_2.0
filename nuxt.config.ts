@@ -1,50 +1,61 @@
 import svgLoader from "vite-svg-loader"
+import tailwindcss from "@tailwindcss/vite"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
   debug: false,
   telemetry: false,
-  dev: !!parseInt(process.env.APP_DEV!),
+  dev: !!parseInt(import.meta.env.APP_DEV!),
 
-  srcDir: "src/",
-  compatibilityDate: "2024-04-03",
-  spaLoadingTemplate: "./app/ui/app-loading.html",
-
-  dir: {
-    layouts: "./app/layouts",
-    plugins: "./app/plugins",
-    modules: "./app/modules",
-    middleware: "./app/middleware",
-    public: "../public"
-  },
-
+  spaLoadingTemplate: "./ui/app-loading.html",
   devtools: { enabled: true },
 
+  alias: {
+    "#shared": "./app/shared",
+    "#entities": "./app/entities",
+    "#features": "./app/features",
+    "#widgets": "./app/widgets",
+    "#pages": "./app/pages"
+  },
+
   components: [
-    { path: "./app/ui", pathPrefix: false },
+    { path: "./ui", pathPrefix: false },
     { path: "./shared/ui", pathPrefix: false }
   ],
 
   imports: {
-    dirs: ["./shared/composables", "./shared/lib", "./shared/constants", "./shared/stores"]
+    dirs: [
+      "./shared/composables",
+      "./shared/composables/**",
+      "./shared/constants",
+      "./shared/constants/**",
+      "./shared/directives",
+      "./shared/directives/**",
+      "./shared/lib",
+      "./shared/lib/**",
+      "./shared/stores",
+      "./shared/stores/**"
+    ]
   },
 
   devServer: {
-    port: parseInt(process.env.APP_PORT || "8000", 10),
-    host: process.env.APP_HOST || "0.0.0.0"
+    port: parseInt(import.meta.env.APP_PORT || "8000", 10),
+    host: import.meta.env.APP_HOST || "0.0.0.0"
   },
 
   runtimeConfig: {
     public: {
-      isDev: !!parseInt(process.env.APP_DEV!),
-      apiUrl: process.env.APP_API_URL,
-      recaptchaKey: process.env.APP_RECAPTCHA_KEY
+      isDev: !!parseInt(import.meta.env.APP_DEV!),
+      apiUrl: import.meta.env.APP_API_URL,
+      recaptchaKey: import.meta.env.APP_RECAPTCHA_KEY
     }
   },
-
+  typescript: {
+    typeCheck: true
+  },
   routeRules: {
-    "/gateway/**": { proxy: process.env.APP_API_URL }
+    "/gateway/**": { proxy: import.meta.env.APP_API_URL }
   },
 
   app: {
@@ -52,15 +63,15 @@ export default defineNuxtConfig({
     layoutTransition: { name: "fade", mode: "out-in" }
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
+  modules: ["@nuxtjs/i18n", "@nuxt/icon", "@pinia/nuxt", "@vueuse/nuxt", "vue-sonner/nuxt"],
 
-  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "~/shared/assets/css/index.css"],
+  css: ["floating-vue/dist/style.css", "@vuepic/vue-datepicker/dist/main.css", "./assets/css/main.css"],
 
   i18n: {
     lazy: true,
     defaultLocale: "uz",
     restructureDir: false,
-    langDir: "app/locales/",
+    langDir: "./locales/",
     bundle: {
       optimizeTranslationDirective: false
     },
@@ -87,6 +98,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    plugins: [svgLoader({ defaultImport: "component" })]
+    plugins: [svgLoader({ defaultImport: "component" }), tailwindcss()]
   }
 })
